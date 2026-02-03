@@ -18,6 +18,7 @@ class CustomThemeNotifier extends StateNotifier<CustomThemeData> {
   Future<void> _initPrefs() async {
     prefs = await SharedPreferences.getInstance();
     state = _loadTheme();
+    // DEBUG: rimuovere questo print quando hai finito lo sviluppo
     debugPrint(
       'Theme loaded: isDarkMode=${state.isDarkMode}, color=${state.themeColor.value}',
     );
@@ -52,6 +53,7 @@ class CustomThemeNotifier extends StateNotifier<CustomThemeData> {
     }
 
     // Salva i valori del tema
+    // DEBUG: rimuovere questi print
     debugPrint(
       'Saving theme: isDarkMode=${theme.isDarkMode}, color=${theme.themeColor.value}',
     );

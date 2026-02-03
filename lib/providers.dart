@@ -146,7 +146,7 @@ final onlineFilmProvider = FutureProvider<List<Film>>((ref) async {
   }).toList();
 
   // Debug: stampa informazioni sul primo film
-  if (filmList.isNotEmpty) {
+  if (filmList.isNotEmpty) { // rimuovere questi print quando vai in produzione
     debugPrint("Second film parsed: ${filmList[1].titolo}");
     debugPrint("Description: ${filmList[1].descrizione.substring(0, 50)}...");
     debugPrint("Image: ${filmList[1].immagine}");
