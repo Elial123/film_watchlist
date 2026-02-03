@@ -12,7 +12,7 @@ class FilmList extends StateNotifier<List<Film>> {
   static const String _filmRatingsKey = 'film_ratings';
   
   // Costruttore
-  FilmList() : super([]) {
+  FilmList() : super([]) { // Chiama il costruttore della classe genitore StateNotifier<List<Film>> passando una lista vuota [] come stato iniziale.
     _initPrefs();
   }
   
