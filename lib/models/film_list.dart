@@ -116,7 +116,10 @@ class FilmList extends StateNotifier<List<Film>> {
     void toggleFilmWatched(String id) {
       final newItems = [ // crea una nuova lista di film con lo stato aggiornato
         for (final item in state)
-          if (item.id == id) item.copyAsWatched(!item.visto) else item,
+          if (item.id == id) 
+            item.copyAsWatched(!item.visto) 
+          else 
+            item,
       ];
   
       state = newItems; // aggiorna lo stato 
@@ -127,7 +130,10 @@ class FilmList extends StateNotifier<List<Film>> {
     void updateFilmRating(String id, int rating) {
       final newItems = [
         for (final item in state)
-          if (item.id == id) item.copyWithRating(rating) else item,
+          if (item.id == id)
+            item.copyWithRating(rating) 
+          else 
+            item,
       ];
       
       state = newItems;
