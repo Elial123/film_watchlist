@@ -51,14 +51,14 @@ Film Watchlist è un'applicazione mobile multipiattaforma che consente agli uten
 
 > 1. La home page principale con la vista a griglia/lista dei film
 
-<img src="screenshots/grid_home.png" width="600" height="390" alt="Grid Home Page">
+<img src="screenshots/grid_home.png" width="600" height="300" alt="Grid Home Page">
 <img src="screenshots/list_home.png" width="290" alt="List Home Page">
 
 > 2. La pagina delle impostazioni con le opzioni del tema e i filtri
 
-<img src="screenshots/setting_mod_scura.png" width="600" height="390" alt="Mod Scura">
-<img src="screenshots/setting_mod_visti.png" width="600" height="390" alt="Mod Visti">
-<img src="screenshots/ricarica_dati.png" width="600" height="390" alt="Ricarica Dati">
+<img src="screenshots/setting_mod_scura.png" width="600" height="300" alt="Mod Scura">
+<img src="screenshots/setting_mod_visti.png" width="600" height="300" alt="Mod Visti">
+<img src="screenshots/ricarica_dati.png" width="600" height="300" alt="Ricarica Dati">
 
 > 3. Una card di film che mostra la funzionalità di valutazione o la pagina informazioni con le statistiche
 
