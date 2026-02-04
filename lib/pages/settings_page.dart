@@ -36,7 +36,7 @@ class SettingsPage extends ConsumerWidget { // usa ConsumerWidget per accedere a
           ListTile( // cambia il colore del tema
             title: const Text('Colore tema'),
             subtitle: const Text('Cambia il colore principale dell\'app'),
-            leading: CircleAvatar(
+            leading: CircleAvatar(                       // mostra il colore attuale del tema
               backgroundColor: theme.themeColor,
               radius: 16,
             ),
@@ -55,7 +55,7 @@ class SettingsPage extends ConsumerWidget { // usa ConsumerWidget per accedere a
 
           // Sezione Filtri
           _SectionHeader(title: 'Filtri'),
-          SwitchListTile(
+          SwitchListTile(                                  // switch per mostrare solo i film visti
             title: const Text('Mostra solo film visti'),
             subtitle: Text(
               showOnlyWatched
@@ -74,7 +74,7 @@ class SettingsPage extends ConsumerWidget { // usa ConsumerWidget per accedere a
               }
             },
           ),
-          SwitchListTile(
+          SwitchListTile(                                  // switch per mostrare solo i film non visti
             title: const Text('Mostra solo film non visti'),
             subtitle: Text(
               showOnlyUnwatched
@@ -148,11 +148,11 @@ class _SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Padding(                          // aggiunge un po' di spazio sopra e sotto i widget di intestazione
       padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
       child: Text(
         title,
-        style: TextStyle(
+        style: TextStyle(                          // stile per il testo dell'intestazione
           fontSize: 14,
           fontWeight: FontWeight.bold,
           color: Theme.of(context).colorScheme.primary,

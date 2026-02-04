@@ -26,10 +26,10 @@ class InformationPage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _Header(theme: theme),
+            _Header(theme: theme), // intestazione della pagina
             const SizedBox(height: 32),
 
-            _StatisticsSection( // sezione delle statistiche
+            _StatisticsSection( // sezione delle statistiche contentente filmCount, vistiCount, daVedereCount
               filmCount: filmCount,
               vistiCount: vistiCount,
               daVedereCount: daVedereCount,
@@ -37,7 +37,7 @@ class InformationPage extends ConsumerWidget {
 
             const SizedBox(height: 32),
 
-            _InfoSection( // sezione "Cos'è questa app?"
+            _InfoSection( // sezione che spiega cos'è l'app ("Cos'è questa app?")
               title: 'Cos\'è questa app?',
               icon: Icons.info_outline,
               content:
@@ -48,7 +48,7 @@ class InformationPage extends ConsumerWidget {
 
             const SizedBox(height: 24),
 
-            _InfoSection( // sezione "Funzionalità"
+            _InfoSection( // sezione che spiega le funzionalità ("Funzionalità")
               title: 'Funzionalità',
               icon: Icons.star_outline,
               content: '',
@@ -78,12 +78,12 @@ class InformationPage extends ConsumerWidget {
             ),
 
             const SizedBox(height: 32),
-            // sezione "Distribuzione per Genere"
+            // sezione che mostra la distribuzione per genere ("Distribuzione per Genere")
             if (filmList.isNotEmpty) ...[
               _GenreDistribution(films: filmList),
               const SizedBox(height: 32),
             ],
-            // sezione "Versione" dell'app
+            // sezione che mostra la versione dell'app ("Versione")
             Center(
               child: Text(
                 'Versione 1.0.0',
@@ -110,16 +110,16 @@ class _Header extends StatelessWidget {
     return Center(
       child: Column(
         children: [
-          Icon(Icons.movie_filter, size: 80, color: theme.colorScheme.primary),
+          Icon(Icons.movie_filter, size: 80, color: theme.colorScheme.primary), // icona grande
           const SizedBox(height: 16),
-          Text(
+          Text(                                                                 // titolo principale
             'Film Watchlist',
             style: theme.textTheme.headlineMedium?.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
           const SizedBox(height: 8),
-          Text(
+          Text(                                                                 // sottotitolo
             'La tua collezione personale di film',
             style: theme.textTheme.bodyLarge?.copyWith(
               color: Colors.grey[600],
@@ -300,10 +300,10 @@ class _FeatureItem extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: theme.colorScheme.primary.withOpacity(0.1),
+              color: theme.colorScheme.primary.withOpacity(0.1), // sfondo leggero
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Icon(icon, color: theme.colorScheme.primary, size: 24),
+            child: Icon(icon, color: theme.colorScheme.primary, size: 24), // icona della funzionalità dentro un cerchio
           ),
           const SizedBox(width: 16),
           Expanded(
@@ -313,13 +313,13 @@ class _FeatureItem extends StatelessWidget {
                 Text(
                   title,
                   style:
-                      const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      const TextStyle(fontWeight: FontWeight.bold, fontSize: 16), // titolo della funzionalità
                 ),
                 const SizedBox(height: 4),
                 Text(
                   description,
                   style: TextStyle(
-                    color: Colors.grey[600],
+                    color: Colors.grey[600], // descrizione della funzionalità
                     height: 1.4,
                   ),
                 ),
