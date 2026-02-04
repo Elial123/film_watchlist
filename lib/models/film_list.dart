@@ -83,7 +83,7 @@ class FilmList extends StateNotifier<List<Film>> {
     debugPrint('Saved film ratings to storage');
   }
 
-  // Imposta la lista di film, caricando lo stato "visto" da SharedPreferences
+  // Imposta la lista di film appena ricevuta, caricando lo stato "visto" da SharedPreferences
   void setFilms(List<Film> films) {
     final watchedIds = _loadWatchedFilmIds();
     final ratings = _loadFilmRatings();
@@ -94,7 +94,7 @@ class FilmList extends StateNotifier<List<Film>> {
       debugPrint('First film: ${films[0].titolo} - ${films[0].descrizione.substring(0, 50)}...');
     }
     
-    // Aggiorna la lista di film, applicando lo stato "visto" salvato
+    // Aggiorna la lista di film, applicando lo stato "visto" salvato o la valutazione salvata
     state = [
       for (final film in films)
         if (watchedIds.contains(film.id) || ratings.containsKey(film.id))
