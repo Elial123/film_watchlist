@@ -1,5 +1,3 @@
-package com.example.film_watchlist
+package com.example.test5
 
-import io.flutter.embedding.android.FlutterActivity
-
-class MainActivity : FlutterActivity()
+// This file intentionally left without a MainActivity to avoid class redeclaration.
