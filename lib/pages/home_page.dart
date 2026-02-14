@@ -49,7 +49,7 @@ class HomePage extends ConsumerWidget {
                   ref.read(searchQueryProvider.notifier).state = value;
                 },
               )
-            : Text(ref.watch(appNameProvider)),
+            : Text(ref.watch(appNameProvider)), // mostra il nome dell'app quando non è attiva la modalità di ricerca
         actions: [
           IconButton(
             icon: Icon(isSearchMode ? Icons.close : Icons.search),
