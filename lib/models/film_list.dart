@@ -136,7 +136,7 @@ class FilmList extends StateNotifier<List<Film>> {
             item,
       ];
       
-      state = newItems;
+      state = newItems; // aggiorna lo stato con la nuova valutazione, notificando i listener
       _saveFilmRatings(); // salva le valutazioni
     }
   }

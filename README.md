@@ -2,7 +2,7 @@
 
 ## A. Informazioni Studente
 **Nome:** Elia Lini  
-**Numero di Matricola:** 344397
+**Numero di Matricola:** 344967
 
 ## B. Titolo del Progetto
 **Film Watchlist** - Applicazione mobile multipiattaforma basata su Flutter per la gestione di liste personali di film da guardare
