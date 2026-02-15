@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:film_watchlist/pages/main_navigation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'providers.dart';
 
-void main() {
+void main() async {
+  // Assicura che i binding Flutter siano inizializzati
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Inizializza SharedPreferences prima di creare i provider
+  // Questo garantisce che FilmList abbia accesso ai dati persistenti
+  await SharedPreferences.getInstance();
+  
   runApp(ProviderScope(child: const MainApp()));
 }
 
